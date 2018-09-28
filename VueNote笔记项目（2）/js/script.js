@@ -3,7 +3,7 @@ Vue.component('note', {
     template: `
     <div class="ui card">
         <div class="content">
-            <div class="header">{{titleLnegth || '新建笔记'}}</div>
+            <div class="header">{{titleLnegth || '新建的笔记'}}</div>
             <div class="meta">
                 <span>{{createDate}}</span>
                 <span>{{todo.title.length}}字</span>
