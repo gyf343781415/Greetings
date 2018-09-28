@@ -1,0 +1,19 @@
+new Vue({
+    el:"#app",
+    data:{
+        ol:"",
+       lists:[
+        "学习vue",
+        "学习js",
+        "学习script"   
+    ]
+    }, 
+    methods:{
+        fun:function(){
+          this.lists.push(this.ol);   
+        },
+        del:function(e){
+            this.lists.splice(e,1);
+        }
+    }
+})

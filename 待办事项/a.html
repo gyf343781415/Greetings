@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        #app{
+            width:100%;
+            margin:0 auto;
+            text-align:center; 
+        }
+        #app h1{
+            text-align: center;
+        }
+        #app input{
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+   <div id="app">
+       <h1>待办事项</h1>
+        <div>
+            <input type="text" v-model="ol" @keyup.enter="fun">
+           <button @click="fun">添加</button>
+        </div>
+        <ul>
+            <li v-for="(list,index) in lists">{{list}}
+               <button @click="del(index)">删除</button>
+            </li>
+        </ul>
+   </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+     <script src="js/script.js"></script>
+</body>
+</html>
